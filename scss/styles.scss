@@ -18,85 +18,90 @@ $theme: #822ae8;
 $shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
 
 * {
-   padding: 0;
-   margin: 0;
-   color: $font-color;
+  padding: 0;
+  margin: 0;
+  color: $font-color;
 }
 
 body {
-   font-family: $font;
-   background: $bg;
+  font-family: $font;
+  background: $bg;
 }
 
 .container {
-   max-width: 1400px;
-   margin: 2rem auto;
-   display: flex;
-   @media screen and (max-width: 900px) {
-      flex-direction: column;
-      margin: 0;
-   }
+  max-width: 1400px;
+  margin: 2rem auto;
+  display: flex;
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .day {
-   flex: 1;
-   box-shadow: $shadow;
-   background-color: $white;
-   margin: 0 0.5rem;
-   min-height: 196px;
-   .d {
-      background-color: rgba($font-color, 0.4);
-      color: $white;
-      font-weight: $thin;
-      font-size: 1.4rem;
-      text-align: center;
-      line-height: 60px;
-      text-transform: uppercase;
-      letter-spacing: 0.2px;
-   }
-   .extra {
-      margin-top: 0.5rem;
-      text-align: center;
-   }
-   @media screen and (max-width: 900px) {
-      margin: 1rem 0.5rem;
-   }
+  flex: 1;
+  box-shadow: $shadow;
+  background-color: $white;
+  margin: 0 0.5rem;
+  min-height: 196px;
+  .d {
+    background-color: rgba($font-color, 0.4);
+    color: $white;
+    font-weight: $thin;
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .extra {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  @media screen and (max-width: 900px) {
+    margin: 1rem 0.5rem;
+  }
 }
 
 .today {
-   background-color: $theme !important;
+  background-color: $theme !important;
+}
+
+.link {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .block {
-   padding: 6px;
-   box-sizing: border-box;
-   height: 120px;
-   margin: 0.5rem;
-   transition: all 300ms;
-   .ta {
-      font-weight: $thicc;
-   }
+  padding: 6px;
+  box-sizing: border-box;
+  height: 120px;
+  margin: 0.5rem;
+  transition: all 300ms;
+  .ta {
+    font-weight: $thicc;
+  }
 }
 
 @mixin officehours($color) {
-   @extend .block;
-   border-left: 4px solid $color;
-   background-color: rgba($color, 0.1);
-   p {
-      color: $color;
-   }
-   &:hover {
-      p {
-         color: $white;
-      }
-      background-color: $color;
-   }
+  @extend .block;
+  border-left: 4px solid $color;
+  background-color: rgba($color, 0.1);
+  p {
+    color: $color;
+  }
+  &:hover {
+    p {
+      color: $white;
+    }
+    background-color: $color;
+  }
 }
 
 .cs546 {
-   @include officehours($cs546);
+  @include officehours($cs546);
 }
 
 .cs554 {
-   @include officehours($cs554);
+  @include officehours($cs554);
 }
