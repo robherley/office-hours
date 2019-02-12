@@ -1,0 +1,15 @@
+{
+  "name": "web-dev-calendar",
+  "version": "1.0.0",
+  "description": "it's the web dev office hours",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "Rob Herley",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
